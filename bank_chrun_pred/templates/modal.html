@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  <title>Student Marks Prediction</title>
+  <link rel="shortcut icon" type="image/jpg" href="https://img.icons8.com/emoji/48/000000/man-student.png" />
+
+  <style>
+    .form-signin {
+      width: 100%;
+      max-width: 330px;
+      padding: 15px;
+      margin: auto;
+    }
+  </style>
+</head>
+
+<body class="text-center" data-new-gr-c-s-check-loaded="14.1003.0" data-gr-ext-installed="">
+
+
+  <!-- navbar -->
+  <nav class="navbar navbar-light bg-info">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{{url_for('home')}}">
+        <img src="https://img.icons8.com/emoji/48/000000/man-student.png" alt="" width="30" height="24"
+          class="d-inline-block align-text-top">
+        Student Marks Prediction
+      </a>
+    </div>
+  </nav>
+  <!-- navbar -->
+
+
+
+
+
+
+
+  <main class="form-signin">
+    <form action="{{url_for('predict')}}" method="post">
+      <br>
+      <img class="mb-4" src="https://img.icons8.com/emoji/48/000000/man-student.png" alt="" width="72" height="57">
+      <h1 class="h5 mb-2 fw-normal">Enter Your </h1>
+      <h1 class="h5 mb-4 fw-normal">Name & Student Study Hours </h1>
+      <p style=color:red>{{done}}</p>
+      <div class="form-floating">
+        <label for="fname"> </label>
+        <input type="text" class="form-control" id="floatingInput" name="fname" placeholder=" Nishat"
+          required=required>
+        <label for="fname">Enter Name </label>
+      </div>
+
+      <div class="form-floating">
+        <label for="number"> </label>
+        <input type="number" class="form-control" id="floatingPassword" placeholder="Study Hours" name="number"
+          required=required>
+        <label for="number"> Study Hours</label>
+      </div>
+
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+      </div>
+
+
+      <button class="w-100 btn btn-lg btn-primary  " data-bs-toggle="modal" data-bs-target="#exampleModal"
+        type="submit">Predict</button>
+      <br>
+
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Predicted Output</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p><span style="color:red; font-size:20px;">{{fname}}</span> You will get <span
+                  style="color:red; font-size:20px;">{{pred_out}}%
+                </span>
+                Marks, <br>When you do study <span style="color:red; font-size:20px;">{{number}} hours</span> per Day
+              </p>
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary bg-info" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br>
+
+
+
+
+
+
+    </form>
+
+    <!-- Modal -->
+
+    <button class="w-70 btn btn-sm btn-outline-danger   " data-bs-toggle="modal" data-bs-target="#exampleModal"
+      type="submit">{{show}}</button>
+    <br>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Predicted Output</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>{{fname}} You will get {{pred_out}}% marks, when you do study {{number}} hours per day"</p>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary bg-info" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+
+    <!-- modal -->
+
+
+
+  </main>
+
+
+
+  <!-- Footer -->
+  <footer class="page-footer font-small bg-info blue pt-4">
+
+    <!-- Footer Links -->
+    <div class="container-fluid text-center text-md-left">
+
+      <!-- Grid row -->
+      <div class="row">
+
+        <!-- Grid column -->
+        <div class="col-md-6 mt-md-0 mt-3">
+
+          <!-- Content -->
+          <h5 class="text-uppercase">prediction</h5>
+          <p>This system aims to predict student's marks using linear regression.
+            The
+            idea behind this analysis is to predict the
+            marks of students by their studying hours.Through this project we can determine:</p>
+
+        </div>
+        <!-- Grid column -->
+
+        <hr class="clearfix w-100 d-md-none pb-3">
+
+        <!-- Grid column -->
+        <div class="col-md-3 mb-md-0 mb-3">
+
+          <!-- Links -->
+          <h5 class="text-uppercase">Links</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <a href="{{url_for('home')}}">Home</a>
+            </li>
+            <li>
+              <a href="#!">About</a>
+            </li>
+
+          </ul>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 mb-md-0 mb-3">
+
+          <!-- Links -->
+          <h5 class="text-uppercase">Links</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <a href="#">Contact</a>
+            </li>
+            <li>
+              <a href="#">Privacy</a>
+            </li>
+          </ul>
+
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2021 Copyright:
+      <a href="{{url_for('home')}}">Nishat Shaikh </a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
+  <!-- footer -->
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

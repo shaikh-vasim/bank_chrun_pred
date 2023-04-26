@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Marks Prediction</title>
+    <link rel="shortcut icon" type="image/jpg" href="https://img.icons8.com/fluency/48/null/bank.png" />
+
+
+</head>
+
+<body>
+
+    <!---- start--header---->
+    <header class="text-gray-600 body-font ">
+        <div class="container mx-auto  flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a class="flex title-font  font-medium items-center text-gray-900 mb-2 md:mb-0">
+                <a href="{{url_for('home')}}"
+                    class="flex title-font  font-medium items-center text-gray-900 mb-2 md:mb-0">
+                    <img src="https://img.icons8.com/doodle/48/null/bank.png" />
+                    <span class="ml-3 text-xl">Bank Churn Prediction</span>
+                </a>
+                <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+                    <a class="mr-5 hover:text-gray-900   " href="{{url_for('home')}}">Home</a>
+                    <a class="mr-5 hover:text-gray-900   " href="{{url_for('pred')}}">Predict</a>
+                    <a class="mr-6 hover:text-gray-900  " href="{{url_for('about')}}">About </a>
+                    <a class="mr-5 hover:text-gray-900   " href="#">Contact</a>
+                </nav>"
+                <button
+                    class="inline-flex items-center bg-AliceBlue-100 border-0 py-1 px-3 bg-blue-500  text-white   focus:outline-none hover:bg-gray-500  text-white rounded text-base mt-4 md:mt-0">
+                    <a href="#Nishat"> Welcome </a>
+
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+        </div>
+    </header>
+    <!---- start--header---->
+
+    <!---- start--about part---->
+
+    <section class="text-gray-600 body-font">
+        <div class="container px-5 py-24 mx-auto">
+            <div class="flex flex-col text-center w-full mb-20">
+                <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">About us</h1>
+                <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
+                    Welcome to our Bank Customer Churn Prediction website! We are dedicated to providing accurate and
+                    reliable predictions to help banks identify customers who are at risk of churning, so they can take
+                    proactive measures to retain them. With our cutting-edge predictive analytics and advanced machine
+                    learning algorithms, we are committed to assisting banks in reducing customer churn and improving
+                    customer retention rates.
+
+                </p>
+                <br>
+                <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
+                    Our website is designed to be user-friendly and accessible to bank professionals of all levels, from
+                    executives to analysts, to easily understand and utilize our churn prediction services.
+
+                </p>
+<br>
+                <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
+                    At our core, we believe that customer retention is a critical factor for the success of any bank. By
+                    understanding and predicting customer behavior, banks can proactively take steps to retain their
+                    valuable customers, reduce customer churn, and maximize customer lifetime value. Our website offers
+                    a range of features, including data upload and analysis, churn prediction modeling, and
+                    comprehensive reports that provide valuable insights and recommendations to help banks make informed
+                    decisions.
+                </p>
+                <br>
+                <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
+                    We are proud to serve banks and financial institutions globally, and our solutions have been proven
+                    to be effective in helping our clients optimize their customer retention strategies. Whether you are
+                    a small community bank or a large multinational financial institution, our Bank Customer Churn
+                    Prediction website is your trusted partner in identifying customers at risk of churning and
+                    empowering you to take proactive actions to retain them.
+
+
+
+
+
+                </p>
+
+            </div>
+
+        </div>
+    </section>
+    <!---- end--about part---->
+
+
+
+    <!--- start -footer---->
+    <footer class=" text-gray-600 body-font ">
+
+        <div class=" container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col ">
+            <a href=" {{url_for('home')}}" class=" flex title-font font-medium items-center md:justify-start justify-center
+      text-gray-900">
+                <img src="https://img.icons8.com/fluency/48/null/bank.png" alt="">
+
+                <span class="ml-3 text-xl">Marks Prediction</span>
+            </a>
+            <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
+                ©
+                2021
+                Copyright -
+                <a href="{{url_for('home')}}" class="text-gray-600 ml-1" rel="noopener noreferrer"
+                    target="_blank">Nishat
+                </a>
+            </p>
+            <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+                <a class="text-gray-500">
+                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        class="w-5 h-5" viewBox="0 0 24 24">
+                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                    </svg>
+                </a>
+                <a class="ml-3 text-gray-500">
+                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        class="w-5 h-5" viewBox="0 0 24 24">
+                        <path
+                            d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                        </path>
+                    </svg>
+                </a>
+                <a class="ml-3 text-gray-500">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                        <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                    </svg>
+                </a>
+                <a class="ml-3 text-gray-500">
+                    <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                        <path stroke="none"
+                            d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z">
+                        </path>
+                        <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                    </svg>
+                </a>
+            </span>
+        </div>
+
+    </footer>
+
+
+    <!---- end footer---->
+
+
+
+
+
+
+</body>
+
+</html>

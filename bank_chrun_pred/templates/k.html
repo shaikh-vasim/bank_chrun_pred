@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>My Page</title>
+</head>
+<body>
+   <h2>Showing image with a click in JavaScript</h2>
+   <button id="show-image-button">Show Image</button>
+   <img id="my-image" src="https://www.tutorialspoint.com/static/images/logo-color.png" style="display: none;">
+   <script>
+      const showImageButton = document.getElementById("show-image-button");
+      const myImage = document.getElementById("my-image"); 
+      showImageButton.addEventListener("click", () => { 
+         myImage.style.display = "block"; 
+      });
+   </script>
+</body>
+</html>
